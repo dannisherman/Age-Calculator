@@ -14,3 +14,12 @@ function calculateAge() {
       'Please enter your birthdate.'
   }
 }
+
+document
+  .getElementById('birthdate')
+  .addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      event.preventDefault() // Prevent the default action of the Enter key
+      calculateAge() // Call the function to calculate and display the age
+    }
+  })
